@@ -1,9 +1,8 @@
   footer {
       color: black;
       height: 50px;
-  }
 
-
-  span .nav-link {
-      color: rgb(48, 0, 66);
+      & span {
+          color: rgb(114, 71, 255);
+      }
   }
