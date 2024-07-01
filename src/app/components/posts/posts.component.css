@@ -1,0 +1,35 @@
+.fixed-img-size {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+hr {
+    padding-bottom: 2%;
+
+}
+
+.viaje {
+    color: #007BFF;
+    /* Azul */
+}
+
+.finanzas {
+    color: #28A745;
+    /* Verde */
+}
+
+.tecnologia {
+    color: #FFC107;
+    /* Amarillo */
+}
+
+.moda {
+    color: #E83E8C;
+    /* Rosa */
+}
+
+.medio-ambiente {
+    color: #17A2B8;
+    /* Cian */
+}

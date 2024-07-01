@@ -1,0 +1,19 @@
+<hero></hero>
+<div class="select-center"><label class="form-label">Selecciona la categoria</label>
+    <select class="form-select" (change)="onChangeCategory($event)">
+        <option value="todos">Todos</option>
+        @for(cat of arrCategorias; track $index){
+        <option [value]="cat">{{cat}}</option>
+        }
+    </select>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <ng-container *ngFor="let publi of arrPosts; 
+            track $index">
+            <posts {post}="publi"></posts>
+        </ng-container>
+
+    </div>
+</div>

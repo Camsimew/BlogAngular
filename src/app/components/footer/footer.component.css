@@ -1,0 +1,9 @@
+  footer {
+      color: black;
+      height: 200px;
+  }
+
+
+  footer .nav-link {
+      color: white;
+  }

@@ -1,0 +1,16 @@
+.hero {
+    height: 400px;
+    margin-bottom: 75px;
+    margin-top: 0;
+    font-size: large;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+
+    & h1 {
+        font-size: 50px;
+        align-items: center;
+        align-content: center;
+    }
+}

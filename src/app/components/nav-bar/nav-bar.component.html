@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block" style="z-index: 2000;">
+    <div class="container-fluid">
+        <a class="navbar-brand nav-link" target="_blank" href="">
+            <strong>BJA</strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-collapse-init data-target="#navbarExample"
+            aria-controls="navbarExample" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarExample01">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <li class="nav-item" [routerLink]="['/posts']">
+                    Posts
+                </li>
+
+                <li class="nav-item" [routerLink]="['/nuevo']">Nuevo post
+                </li>
+
+
+            </ul>
+
+            <ul class="navbar-nav d-flex flex-row">
+
+                <li class="nav-item me-3 me-lg-0">
+                    <a class="nav-link" href="" rel="nofollow" target="_blank">Login
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+                </li>
+                <li class="nav-item me-3 me-lg-0">
+                    <a class="nav-link" href="" rel="nofollow" target="_blank">Logout
+                        <i class="fa fa-sign-in"></i>
+                    </a>
+
+            </ul>
+        </div>
+    </div>
+</nav>

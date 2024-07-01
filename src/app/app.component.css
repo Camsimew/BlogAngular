@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    align-content: center;
+
+}
+
+header {
+    background-color: gray;
+    background-image: url('https://wallpapers.com/images/hd/new-york-city-landscape-a9m4rabmo53s07cd.jpg');
+    background-size: cover;
+    align-items: center;
+    align-content: center;
+    opacity: 0.8;
+    transform: translateY(-10px);
+
+
+
+}
+
+
+hr {
+    border: 2px solid rgb(42, 41, 41);
+
+}
