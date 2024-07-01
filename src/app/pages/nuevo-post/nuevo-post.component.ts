@@ -1,15 +1,16 @@
 import { Component, Input, NgModule, inject } from '@angular/core';
 import { PostsService } from '../../services/posts.service';
 import { FormBuilder, FormControl, FormGroup, FormsModule, NgModel, ReactiveFormsModule } from '@angular/forms';
-import { NgFor } from '@angular/common';
+import { NgFor, TitleCasePipe } from '@angular/common';
 import { Router } from '@angular/router';
 import { Post } from '../../interfaces/interface.post';
 import Swal from 'sweetalert2';
 
+
 @Component({
   selector: 'app-nuevo-post',
   standalone: true,
-  imports: [NgFor, ReactiveFormsModule, FormsModule],
+  imports: [NgFor, ReactiveFormsModule, FormsModule, TitleCasePipe],
   templateUrl: './nuevo-post.component.html',
   styleUrl: './nuevo-post.component.css'
 })
@@ -37,8 +38,8 @@ export class NuevoPostComponent {
   onSubmit() {
     this.postsService.create(this.formulario.value);
     Swal.fire({
-      title: 'Empleado creado',
-      text: 'Se ha creado un nuevo empleado',
+      title: 'Post creado',
+      text: 'Se ha creado un nuevo post',
       icon: 'success',
     });
     if (this.formulario.valid) {

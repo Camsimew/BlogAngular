@@ -35,11 +35,14 @@
                 <div class="col-md-4 mb-4">
                     <div class="card">
                         <img src={{post.imagen}} class="card-img-top fixed-img-size" alt="...">
-                        <p class="card-text p-4" [ngClass]="getCategoryClass(post.categoria)">{{post.categoria}}</p>
+                        <p class="card-text mx-auto pt-5" [ngClass]="getCategoryClass(post.categoria)">{{post.categoria
+                            |
+                            titlecase}} </p>
                         <div class="card-body">
                             <h4 class="card-title p-3">{{post.titulo}}</h4>
                             <p class="card-text p-3">{{post.texto}}</p>
-                            <small class="text-muted">Por {{post.autor}}, {{post.fecha | date: 'dd/MM/yyyy'}}</small>
+                            <small class="text-muted p-3">Por {{post.autor}}, {{post.fecha | date:
+                                'dd/MM/yyyy'}}</small>
 
                         </div>
                     </div>
