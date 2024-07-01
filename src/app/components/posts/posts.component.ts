@@ -3,7 +3,7 @@ import { Post } from '../../interfaces/interface.post';
 import { RouterLink } from '@angular/router';
 import { PostsService } from '../../services/posts.service';
 import { ListaPostsComponent } from '../../pages/lista-posts/lista-posts.component';
-import { DatePipe, NgClass, TitleCasePipe } from '@angular/common';
+import { DatePipe, NgClass, NgIf, TitleCasePipe } from '@angular/common';
 import slugify from 'slugify';
 
 
@@ -11,7 +11,7 @@ import slugify from 'slugify';
 @Component({
   selector: 'posts',
   standalone: true,
-  imports: [RouterLink, ListaPostsComponent, DatePipe, NgClass, TitleCasePipe],
+  imports: [RouterLink, ListaPostsComponent, DatePipe, NgClass, TitleCasePipe, NgIf],
   templateUrl: './posts.component.html',
   styleUrl: './posts.component.css'
 })

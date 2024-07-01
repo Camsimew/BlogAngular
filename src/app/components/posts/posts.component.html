@@ -2,28 +2,28 @@
     <div class="container">
         <section>
             <div class="row">
-                <div class="col-md-6 gx-5 mb-4">
+                <div class="col-md-6 gx-5 mb-4" *ngIf="arrPosts.length > 0">
                     <div class="bg-image hover-overlay shadow-2-strong" data-mdb-ripple-init
                         data-mdb-ripple-color="light">
-                        <img src="https://mdbootstrap.com/img/new/slides/031.jpg" class="img-fluid" />
+                        <img [src]="arrPosts[0].imagen" class="img-fluid" />
                         <a href="#!">
                             <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                         </a>
                     </div>
                 </div>
 
-                <div class="col-md-6 gx-5 mb-4">
-                    <h4><strong>{{post?.titulo}}</strong></h4>
-                    <p class="text-muted">
-                        {{post?.texto}}
-                    </p>
-                    <p><strong>Doloremque vero ex debitis veritatis?</strong></p>
-                    <p class="text-muted">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod itaque voluptate
-                        nesciunt laborum incidunt. Officia, quam consectetur. Earum eligendi aliquam illum
-                        alias, unde optio accusantium soluta, iusto molestiae adipisci et?
-                    </p>
+
+                <div class="col-md-6 gx-5 mb-4" *ngIf="arrPosts.length > 0">
+                    <h4><strong>{{ arrPosts[0].titulo }}</strong></h4>
+                    <p class="text-muted">{{ arrPosts[0].categoria }}</p>
+                    <p class="text-muted">{{ arrPosts[0].texto }}</p>
+                    <p><strong>{{ arrPosts[0].autor }}</strong></p>
+
+                    <div class="d-flex">
+                        <input type="submit" value="Leer más" class="btn btn-primary bg">
+                    </div>
                 </div>
+
             </div>
         </section>
 
@@ -43,7 +43,11 @@
                             <p class="card-text p-3">{{post.texto}}</p>
                             <small class="text-muted p-3">Por {{post.autor}}, {{post.fecha | date:
                                 'dd/MM/yyyy'}}</small>
+                            <hr>
 
+                            <div class="d-flex">
+                                <input type="submit" value="Leer más" class="btn btn-primary bg">
+                            </div>
                         </div>
                     </div>
                 </div>
