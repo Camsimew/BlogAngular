@@ -4,6 +4,7 @@ import { FormBuilder, FormControl, FormGroup, FormsModule, NgModel, ReactiveForm
 import { NgFor } from '@angular/common';
 import { Router } from '@angular/router';
 import { Post } from '../../interfaces/interface.post';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-nuevo-post',
@@ -35,8 +36,11 @@ export class NuevoPostComponent {
 
   onSubmit() {
     this.postsService.create(this.formulario.value);
-    alert('Se ha publicado un nuevo');
-    this.router.navigateByUrl('/users');
+    Swal.fire({
+      title: 'Empleado creado',
+      text: 'Se ha creado un nuevo empleado',
+      icon: 'success',
+    });
     if (this.formulario.valid) {
       console.log(this.formulario.value);
       this.formulario.reset();
