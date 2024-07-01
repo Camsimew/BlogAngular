@@ -35,7 +35,7 @@ export class NuevoPostComponent {
 
   onSubmit() {
     this.postsService.create(this.formulario.value);
-    alert('Se ha publicado un nuevo post');
+    alert('Se ha publicado un nuevo');
     this.router.navigateByUrl('/users');
     if (this.formulario.valid) {
       console.log(this.formulario.value);

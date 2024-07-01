@@ -13,3 +13,17 @@ body {
     align-items: center;
     align-content: center;
 }
+
+div.select-center {
+    width: 50%;
+    margin: 0 15% 0 15%;
+    align-items: center;
+    align-content: center;
+
+    &form.label {
+        align-items: center;
+        align-content: center;
+        color: blue;
+    }
+
+}
