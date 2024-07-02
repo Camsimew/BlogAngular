@@ -1,23 +1,27 @@
   .navbar {
-      margin: 0 0 0 50px;
+      margin: 10px 50px 0 50px;
       border-radius: 0;
-      padding: 20px;
-      padding-bottom: 0;
-      height: 70px;
+      padding: 0;
+      height: 65px;
       align-items: center;
       align-content: center;
 
-      & li {
-          font-size: 16px;
-          font-style: bold;
-          padding-left: 30px;
-          opacity: 1;
-          transition: opacity 0.3s, transform 0.3s;
-          transform: translateY(0);
+      & ul {
+          margin-left: 60px;
 
-          &:hover {
-              opacity: 0.7;
-              transform: translateY(1px);
+
+          & li {
+              font-size: 16px;
+              font-style: bold;
+              padding-left: 30px;
+              opacity: 1;
+              transition: opacity 0.3s, transform 0.3s;
+              transform: translateY(0);
+
+              &:hover {
+                  opacity: 0.7;
+                  transform: translateY(1px);
+              }
           }
       }
   }

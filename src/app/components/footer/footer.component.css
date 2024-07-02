@@ -1,6 +1,7 @@
   footer {
       color: black;
       height: 50px;
+      width: 100%;
 
       & span {
           color: rgb(114, 71, 255);
