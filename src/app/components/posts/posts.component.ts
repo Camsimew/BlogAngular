@@ -31,12 +31,6 @@ export class PostsComponent {
     return slugify(categoria, { lower: true });
   }
 
-  postRandom() {
-    const indiceAleatorio = Math.floor(Math.random() * this.arrPosts.length);
-    this.postSeleccionado = this.arrPosts[indiceAleatorio];
-  }
-
-
 
   ngOnInit() {
     this.arrPosts = this.postsService.getAll();

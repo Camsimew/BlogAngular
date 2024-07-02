@@ -35,24 +35,31 @@ export class NuevoPostComponent {
   });
 
 
-  onSubmit() {
-    this.postsService.create(this.formulario.value);
-    Swal.fire({
-      title: 'Post creado',
-      text: 'Se ha creado un nuevo post',
-      icon: 'success',
-    });
-    if (this.formulario.valid) {
-      console.log(this.formulario.value);
-      this.formulario.reset();
+  ngOnInit() {
+  }
 
+  onSubmit() {
+    if (this.formulario.valid) {
+      const newPost = this.formulario.value;
+
+      this.postsService.create(newPost);
+
+      const storedPosts = localStorage.getItem('posts');
+      const posts = storedPosts ? JSON.parse(storedPosts) : [];
+      posts.push(newPost);
+      localStorage.setItem('posts', JSON.stringify(posts));
+
+
+      Swal.fire({
+        title: 'Post creado',
+        text: 'Se ha creado un nuevo post',
+        icon: 'success'
+      });
+
+      console.log(newPost);
+      this.formulario.reset();
     } else {
       this.errorMessages = ['Por favor, complete todos los campos correctamente.'];
     }
-
-    //this.router.navigateByUrl('/posts');
-    // } catch({ error }: any) {
-    // this.errorMessages = error.map((err: any) => err.message)
-
   }
 }

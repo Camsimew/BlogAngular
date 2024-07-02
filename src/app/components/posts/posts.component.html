@@ -38,16 +38,17 @@
                         <p class="card-text mx-auto pt-5" [ngClass]="getCategoryClass(post.categoria)">{{post.categoria
                             |
                             titlecase}} </p>
-                        <div class="card-body">
+                        <small class="card-body">
                             <h4 class="card-title p-3">{{post.titulo}}</h4>
                             <p class="card-text p-3">{{post.texto}}</p>
-                            <small class="text-muted p-3">Por {{post.autor}}, {{post.fecha | date:
-                                'dd/MM/yyyy'}}</small>
+                            <small class="text-muted p-3">Por {{post.autor}}, fecha: {{post.fecha | date:
+                                'dd/MM/yyyy'}} </small>
+
                             <hr>
                             <div class="d-flex p-3">
                                 <input type="submit" value="Leer más" class="btn btn-primary bg">
                             </div>
-                        </div>
+                        </small>
                     </div>
                 </div>
                 }
